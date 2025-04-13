@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Min Butik</title>
+  <style>
+    :root {
+      --bakgrund: #f7f9fb;
+      --kort-bakgrund: #ffffff;
+      --accent: #ff6b6b;
+      --accent-dark: #e55050;
+      --text: #2e2e2e;
+      --pris: #27ae60;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bakgrund);
+      color: var(--text);
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .butik {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .produkt {
+      background: var(--kort-bakgrund);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .produkt:hover {
+      transform: scale(1.02);
+    }
+
+    .produkt img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid #eee;
+    }
+
+    .info {
+      padding: 16px;
+    }
+
+    .namn {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .pris {
+      color: var(--pris);
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .kop-knapp {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .kop-knapp:hover {
+      background: var(--accent-dark);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Välkommen till min butik</h1>
+
+  <div class="butik">
+
+    <div class="produkt">
+      <img src="https://via.placeholder.com/600x400" alt="Produkt 1">
+      <div class="info">
+        <div class="namn">Exklusiv T-shirt</div>
+        <div class="pris">249 kr</div>
+        <a class="kop-knapp" href="https://buy.stripe.com/test_XXXXXXXXXX" target="_blank">Köp nu</a>
+      </div>
+    </div>
+
+    <div class="produkt">
+      <img src="https://via.placeholder.com/600x400" alt="Produkt 2">
+      <div class="info">
+        <div class="namn">Stilren Hoodie</div>
+        <div class="pris">499 kr</div>
+        <a class="kop-knapp" href="https://buy.stripe.com/test_YYYYYYYYYY" target="_blank">Köp nu</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+	</html>
